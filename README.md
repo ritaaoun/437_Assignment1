@@ -4,6 +4,8 @@
 I only included header and source files, as requested. Go into the folder 437_Assignment1 and use the Main.cpp file to test.
 Otherwise, the header files (x.hpp) will tell you what you need to know about class x. Implementation would be in x.cpp.
 
+NB: Please use raw view for clarity of below schema.
+
 Some of my design decisions (-> is a parent/child relationship):
 * Primitive ->  Num   ->  Int       -> Floor
                                     -> Ceiling
