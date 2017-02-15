@@ -9,6 +9,7 @@ In this part, I realized that I couldn't make the operations +,-,* and / inherit
 However, this would make me accept TANumber as the input of the constructor while we were asked for this to give a compile error. I couldn't think of a straight-forward solution. And so I made these operations separate, only inheriting from TAOperation.
 
 The schema became:
+
 Primitive
   * Num
     * Int
@@ -33,6 +34,7 @@ I only included header and source files, as requested. Go into the folder 437_As
 Otherwise, the header files (x.hpp) will tell you what you need to know about class x. Implementation would be in x.cpp.
 
 Some of my design decisions (indentation is a parent/child relationship):
+
 1. Primitive
   * Num
     * Int
@@ -51,6 +53,7 @@ Some of my design decisions (indentation is a parent/child relationship):
     * And
     * Or
     * Xor
+
 2. All operations implement the interface TAOperation (now empty).
 3. TAInt and TADouble have the static constant element ZERO (I used it to allow MINUS to be a one-element operation by making it ZERO-number).
 
