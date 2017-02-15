@@ -8,8 +8,12 @@
 class TAFloor : public TAInt, public TAOperation {
 public:
 	TAFloor(const TADouble& d);
+	void list() const;
+	void evaluate();
+	void printState() const;
 private:
-	const TADouble& m_d;
+	using TAInt::set;
+	const TADouble &m_d;
 };
 
 #endif

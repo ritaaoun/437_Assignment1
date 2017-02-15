@@ -8,7 +8,7 @@ public:
 	TABool();
 	TABool(const std::string& name);
 	void set(bool value);
-	virtual void list() const;
+	bool getValue() const;
 private:
 	bool m_value;
 };

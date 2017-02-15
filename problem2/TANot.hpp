@@ -7,8 +7,12 @@
 class TANot : public TABool, public TAOperation {
 public:
 	TANot(const TABool& b);
+	void list() const;
+	void evaluate();
+	void printState() const;
 private:
-	const TABool& m_b;
+	using TABool::set;
+	const TABool &m_b;
 };
 
 #endif

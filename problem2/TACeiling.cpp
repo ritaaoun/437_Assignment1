@@ -9,3 +9,11 @@ void TACeiling::list() const {
 	m_d.list();
 	std::cout << " )";
 }
+
+void TACeiling::evaluate() {
+	TAInt::set(ceil(m_d.getValue()));
+}
+
+void TACeiling::printState() const {
+	std::cout << TAInt::getValue();
+}

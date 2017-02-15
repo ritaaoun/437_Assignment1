@@ -2,19 +2,23 @@
 #include <iostream>
 
 TADouble::TADouble() : TANumber(), m_value() {
-	setType(Type::double_t);
+	setType(Type::doubleType);
 }
 
 TADouble::TADouble(const std::string& name) : TANumber(name), m_value() {
-	setType(Type::double_t);
+	setType(Type::doubleType);
 }
 
 void TADouble::set(double value) {
 	m_value = value;
 }
 
-void TADouble::list() const {
-	std::cout << getName();
+double TADouble::getValue() const {
+	return m_value;
 }
 
-const TADouble TADouble::ZERO("ZERO_DOUBLE");
+const TADouble TADouble::ZERO("ZERO_DOUBLE",0.);
+
+TADouble::TADouble(const std::string& name, double value) : TANumber(name), m_value(value) {
+	setType(Type::intType);
+}

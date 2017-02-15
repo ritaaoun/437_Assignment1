@@ -2,19 +2,23 @@
 #include <iostream>
 
 TAInt::TAInt() : TANumber(), m_value() {
-	setType(Type::int_t);
+	setType(Type::intType);
 }
 
 TAInt::TAInt(const std::string& name) : TANumber(name), m_value() {
-	setType(Type::int_t);
+	setType(Type::intType);
 }
 
 void TAInt::set(int value) {
 	m_value = value;
 }
 
-void TAInt::list() const {
-	std::cout << getName();
+double TAInt::getValue() const {
+	return m_value;
 }
 
-const TAInt TAInt::ZERO("ZERO_INT");
+const TAInt TAInt::ZERO("ZERO_INT",0);
+
+TAInt::TAInt(const std::string& name, int value) : TANumber(name), m_value(value) {
+	setType(Type::intType);
+}

@@ -9,7 +9,10 @@ class TACeiling : public TAInt, public TAOperation {
 public:
 	TACeiling(const TADouble& d);
 	void list() const;
+	void evaluate();
+	void printState() const;
 private:
+	using TAInt::set;
 	const TADouble& m_d;
 };
 

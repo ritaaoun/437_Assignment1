@@ -11,3 +11,16 @@ void TAAnd::list() const {
 	m_rhs.list();
 	std::cout << " )";
 }
+
+void TAAnd::evaluate() {
+	TABool::set(m_rhs.getValue() && m_lhs.getValue());
+}
+
+void TAAnd::printState() const {
+	if (TABool::getValue()) {
+		std::cout << "true";
+	}
+	else {
+		std::cout << "false";
+	}
+}

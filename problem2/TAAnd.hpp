@@ -8,8 +8,11 @@ class TAAnd : public TABool, public TAOperation {
 public:
 	TAAnd(const TABool& lhs, const TABool& rhs);
 	void list() const;
+	void evaluate();
+	void printState() const;
 private:
-	const TABool& m_lhs, m_rhs;
+	using TABool::set;
+	const TABool &m_lhs, &m_rhs;
 };
 
 #endif

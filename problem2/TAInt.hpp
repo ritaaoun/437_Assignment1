@@ -8,9 +8,10 @@ public:
 	TAInt();
 	TAInt(const std::string& name);
 	void set(int value);
-	virtual void list() const;
+	double getValue() const;
 	static const TAInt ZERO;
 private:
+	TAInt(const std::string& name, int value);
 	int m_value;
 };
 
