@@ -30,10 +30,14 @@ void TAMultiply::evaluate() {
 }
 
 void TAMultiply::printState() const {
-	if (TAOperation::getType() == Type::intType) {
+	if (TAPrimitive::type() == Type::intType) {
 		std::cout << (int)m_value;
 	}
 	else {
 		std::cout << m_value;
 	}
+}
+
+double TAMultiply::getValue() const {
+	return m_value;
 }

@@ -2,8 +2,12 @@
 #include <stdexcept>
 #include <iostream>
 
-Type TAPrimitive::type() {
+Type TAPrimitive::type() const {
 	return m_type;
+}
+
+void TAPrimitive::list() const {
+	std::cout << m_name;
 }
 
 TAPrimitive::TAPrimitive() : m_name() {
@@ -22,6 +26,4 @@ void TAPrimitive::setType(Type t) {
 	m_type = t;
 }
 
-void TAPrimitive::list() const {
-	std::cout << m_name;
-}
+std::unordered_set<std::string> m_names;

@@ -1,5 +1,8 @@
 # 437_Assignment1
 
+## Problem 3
+In progress!
+
 ## Problem 2
 In this part, I realized that I couldn't make the operations +,-,* and / inherit from TANumber because that would still not fix the issue I wanted it to fix. I wanted to be able to do:
     TAInt x("x");

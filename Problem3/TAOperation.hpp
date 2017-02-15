@@ -6,7 +6,7 @@
 class TAOperation {
 public:
 	virtual void evaluate() = 0;
-	virtual void printState() = 0;
+	virtual void printState() const = 0;
 };
 
 #endif

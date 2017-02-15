@@ -7,7 +7,7 @@
 
 class TAPrimitive {
 public:
-	Type type();
+	Type type() const;
 	virtual void list() const;
 protected:
 	TAPrimitive();
@@ -16,7 +16,7 @@ protected:
 private:
 	Type m_type;
 	std::string m_name;
-	std::unordered_set<std::string> m_names;
+	static std::unordered_set<std::string> m_names;
 };
 
 #endif

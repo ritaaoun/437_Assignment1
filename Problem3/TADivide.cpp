@@ -30,10 +30,14 @@ void TADivide::evaluate() {
 }
 
 void TADivide::printState() const {
-	if (TAOperation::getType() == Type::intType) {
+	if (TAPrimitive::type() == Type::intType) {
 		std::cout << (int)m_value;
 	}
 	else {
 		std::cout << m_value;
 	}
+}
+
+double TADivide::getValue() const {
+	return m_value;
 }

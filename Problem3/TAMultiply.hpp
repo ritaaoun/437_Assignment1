@@ -15,6 +15,7 @@ public:
 	void list() const;
 	void evaluate();
 	void printState() const;
+	double getValue() const;
 private:
 	const TANumber &m_lhs, &m_rhs;
 	double m_value;
