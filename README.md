@@ -25,6 +25,7 @@ Primitive
     * Xor
 
 As in Problem 1, all operations inherit from TAOperation.
+The set method is only public to Int, Double and Bool. It is private in inherited classes.
 
 Note: In the proposed main, I added y.evaluate() whenever d changed so t1 would have the correct value.
 	
