@@ -6,7 +6,7 @@
 class TABool : public TAPrimitive {
 public:
 	TABool(const std::string &name);
-	void set(bool value);
+	void set(double value) override;
 	bool getValue() const;
 protected:
 	TABool();

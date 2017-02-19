@@ -9,6 +9,7 @@ class TAPrimitive {
 public:
 	Type type() const;
 	virtual void list() const;
+	virtual void set(double d);
 protected:
 	TAPrimitive();
 	TAPrimitive(const std::string &name);

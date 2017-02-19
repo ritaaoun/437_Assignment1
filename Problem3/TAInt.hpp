@@ -6,7 +6,7 @@
 class TAInt : public TANumber {
 public:
 	TAInt(const std::string &name);
-	void set(int value);
+	void set(double value) override;
 	double getValue() const;
 	static const TAInt ZERO;
 protected:

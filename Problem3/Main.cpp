@@ -6,6 +6,7 @@
 #include "TAPair.hpp"
 #include "TAArray.hpp"
 #include "TAPlus.hpp"
+#include "TAArrayAccess.hpp"
 #include <iostream>
 
 int main() {
@@ -18,13 +19,20 @@ int main() {
 
 	//The following line is tricky:
 	// what type should the second argument be declared as?
+	std::cout << "k";
 	TAArray a("a", x.type(), N); //instantiate an array of integer with capacity 16
 	TAInt i("i");
 	TAPlus exp(i, one);
-	//TAArrayAccess ai(a, exp);
-	//TAPair p2(ai, x);
-	//i.set(1);
-	//ai.set(7); // The type of the argument of set for array access is also tricky
+	std::cout << "bye";
+	TAArrayAccess ai(a, exp);
+	TAPair p2(ai, x);
+	i.set(1);
+	exp.evaluate();
+	std::cout << "hi";
+	a.list();
+	std::cout << std::endl;
+	ai.set(7); // The type of the argument of set for array access is also tricky
+	a.list();
 
 	// Problem 2
 	//TAInt x("x");
@@ -60,4 +68,5 @@ int main() {
 	//TADouble d;
 	//TALessThan t1(x, d); // x and d are not of the same type and
 	//					 //thus TALessThan should not accept to perform the construction
+	return 0;
 }

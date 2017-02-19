@@ -5,7 +5,7 @@ TAInt::TAInt(const std::string &name) : TANumber(name), m_value() {
 	setType(Type::intType);
 }
 
-void TAInt::set(int value) {
+void TAInt::set(double value) {
 	m_value = value;
 }
 

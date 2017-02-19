@@ -1,4 +1,5 @@
 #include "TAPair.hpp"
+#include <iostream>
 
 TAPair::TAPair(const TAPrimitive &lhs, const TAPrimitive &rhs) : TAPrimitive(), m_lhs(lhs), m_rhs(rhs) {
 	TAPrimitive::setType(Type::pairType);
@@ -15,4 +16,12 @@ TAPrimitive& TAPair::first() {
 
 TAPrimitive& TAPair::next() {
 	return m_rhs;
+}
+
+void TAPair::list() const {
+	std::cout << "(";
+	m_lhs.list();
+	std::cout << ", ";
+	m_rhs.list();
+	std::cout << ")";
 }

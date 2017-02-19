@@ -14,7 +14,7 @@ TAPrimitive::TAPrimitive() : m_name() {
 }
 
 TAPrimitive::TAPrimitive(const std::string &name) : m_name(name) {
-	if (m_names.count(name)) {
+	if (m_names.count(name) > 0) {
 		throw std::invalid_argument("There is already a variable called: " + name);
 	}
 	else {
@@ -26,4 +26,7 @@ void TAPrimitive::setType(Type t) {
 	m_type = t;
 }
 
-std::unordered_set<std::string> m_names;
+void TAPrimitive::set(double d) {
+}
+
+std::unordered_set<std::string> TAPrimitive::m_names;

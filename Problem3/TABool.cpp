@@ -5,7 +5,7 @@ TABool::TABool(const std::string &name) : TAPrimitive(name), m_value() {
 	setType(Type::boolType);
 }
 
-void TABool::set(bool value) {
+void TABool::set(double value) {
 	m_value = value;
 }
 

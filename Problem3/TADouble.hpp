@@ -6,7 +6,7 @@
 class TADouble : public TANumber {
 public:
 	TADouble(const std::string &name);
-	void set(double value);
+	void set(double value) override;
 	double getValue() const;
 	static const TADouble ZERO;
 protected:
