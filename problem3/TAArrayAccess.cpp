@@ -21,15 +21,15 @@ void TAArrayAccess::set(double val) {
 	TAPrimitive *&member = m_arr.accessArray(m_arrIndex.getValue());
 	Type arrType = m_arr.getMemberType();
 	if (arrType == Type::boolType) {
-		member = new TABool("TAArrayAccess_creation_" + (++m_numberOfNewlyCreatedPrimitiveObjects));
+		member = new TABool("TAArrayAccess_creation_" + std::to_string(++m_numberOfNewlyCreatedPrimitiveObjects));
 		member->set(val);
 	}
 	else if (arrType == Type::intType) {
-		member = new TAInt("TAArrayAccess_creation_" + (++m_numberOfNewlyCreatedPrimitiveObjects));
+		member = new TAInt("TAArrayAccess_creation_" + std::to_string(++m_numberOfNewlyCreatedPrimitiveObjects));
 		member->set(val);
 	}
 	else if (arrType == Type::doubleType) {
-		member = new TADouble("TAArrayAccess_creation_" + (++m_numberOfNewlyCreatedPrimitiveObjects));
+		member = new TADouble("TAArrayAccess_creation_" + std::to_string(++m_numberOfNewlyCreatedPrimitiveObjects));
 		member->set(val);
 	}
 	else {

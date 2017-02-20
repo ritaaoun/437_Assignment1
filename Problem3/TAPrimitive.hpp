@@ -35,7 +35,7 @@ private:
 	Type m_type;
 
 	// Object name
-	std::string m_name;
+	const std::string m_name;
 
 	// Hashset of existing names
 	static std::unordered_set<std::string> m_names;

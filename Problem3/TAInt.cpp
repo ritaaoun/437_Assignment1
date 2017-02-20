@@ -13,8 +13,6 @@ double TAInt::getValue() const {
 	return m_value;
 }
 
-const TAInt TAInt::ZERO("ZERO_INT",0);
-
 TAInt::TAInt() : TANumber(), m_value() {
 	setType(Type::intType);
 }
@@ -22,3 +20,5 @@ TAInt::TAInt() : TANumber(), m_value() {
 TAInt::TAInt(const std::string &name, int value) : TANumber(name), m_value(value) {
 	setType(Type::intType);
 }
+
+const TAInt TAInt::ZERO("ZERO_INT",0);

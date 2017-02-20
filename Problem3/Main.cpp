@@ -19,16 +19,13 @@ int main() {
 
 	//The following line is tricky:
 	// what type should the second argument be declared as?
-	std::cout << "k";
 	TAArray a("a", x.type(), N); //instantiate an array of integer with capacity 16
 	TAInt i("i");
 	TAPlus exp(i, one);
-	std::cout << "bye";
 	TAArrayAccess ai(a, exp);
 	TAPair p2(ai, x);
 	i.set(1);
 	exp.evaluate();
-	std::cout << "hi";
 	a.list();
 	std::cout << std::endl;
 	ai.set(7); // The type of the argument of set for array access is also tricky
