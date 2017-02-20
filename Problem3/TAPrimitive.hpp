@@ -3,7 +3,6 @@
 
 #include "Type.hpp"
 #include <string>
-#include <unordered_set>
 
 // Parent class of all classes
 class TAPrimitive {
@@ -35,10 +34,7 @@ private:
 	Type m_type;
 
 	// Object name
-	const std::string m_name;
-
-	// Hashset of existing names
-	static std::unordered_set<std::string> m_names;
+	std::string m_name;
 };
 
 #endif

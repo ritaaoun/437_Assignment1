@@ -2,7 +2,6 @@
 
 ## Problem 3
 The schema is back to that in Problem 1, with TAPair, TAArray and TAArrayAccess also inheriting from TAPrimitive.
-The body of the constructor TAPrimitive is commented because it is giving me a runtime error, and I can't figure out why.
 
 ## Problem 2
 In this part, I realized that I couldn't make the operations +,-,* and / inherit from TANumber because that would still not fix the issue I wanted it to fix. I wanted to be able to do:

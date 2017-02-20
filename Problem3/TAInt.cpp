@@ -6,7 +6,7 @@ TAInt::TAInt(const std::string &name) : TANumber(name), m_value() {
 }
 
 void TAInt::set(double value) {
-	m_value = value;
+	m_value = static_cast<int>(value);
 }
 
 double TAInt::getValue() const {

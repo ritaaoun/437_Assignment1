@@ -1,6 +1,7 @@
 #include "TAPrimitive.hpp"
 #include <stdexcept>
 #include <iostream>
+#include <unordered_set>
 
 Type TAPrimitive::type() const {
 	return m_type;
@@ -14,14 +15,15 @@ TAPrimitive::TAPrimitive() : m_name() {
 }
 
 TAPrimitive::TAPrimitive(const std::string &name) : m_name(name) {
-	// The following is giving me a runtime error, which is why it is commented, but the idea is there :)
+	// Hashset of existing names
+	static std::unordered_set<std::string> names;
 
-	//if (m_names.count(m_name) > 0) {
-	//	throw std::invalid_argument("There is already a variable called: " + m_name);
-	//}
-	//else {
-	//	m_names.insert(m_name);
-	//}
+	if (names.count(m_name) > 0) {
+		throw std::invalid_argument("There is already a variable called: " + m_name);
+	}
+	else {
+		names.insert(m_name);
+	}
 }
 
 void TAPrimitive::setType(Type t) {
@@ -30,5 +32,3 @@ void TAPrimitive::setType(Type t) {
 
 void TAPrimitive::set(double d) {
 }
-
-std::unordered_set<std::string> TAPrimitive::m_names;
