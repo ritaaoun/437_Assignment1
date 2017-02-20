@@ -37,4 +37,8 @@ void TAArrayAccess::set(double val) {
 	}
 }
 
+void TAArrayAccess::list() const {
+	m_arr.accessArray(m_arrIndex.getValue())->list();
+}
+
 int TAArrayAccess::m_numberOfNewlyCreatedPrimitiveObjects = 0;

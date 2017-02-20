@@ -5,13 +5,21 @@
 
 class TAPair : public TAPrimitive {
 public:
-	TAPair(const TAPrimitive &lhs, const TAPrimitive &rhs);
-	TAPair(const std::string &name, const TAPrimitive &lhs, const TAPrimitive &rhs);
+	// The constructors take references to two items and save them
+	// Providing a name is optional
+	TAPair(TAPrimitive &lhs, TAPrimitive &rhs);
+	TAPair(const std::string &name, TAPrimitive &lhs, TAPrimitive &rhs);
+
+	// These two functions return a reference to one of the members of the pair
 	TAPrimitive& first();
 	TAPrimitive& next();
+
+	// This function prints information about the two items it references
 	void list() const;
+
 private:
-	TAPrimitive m_lhs, m_rhs;
+	// References given in the constructor
+	TAPrimitive &m_lhs, &m_rhs;
 };
 
 #endif

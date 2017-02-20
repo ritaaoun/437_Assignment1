@@ -18,13 +18,15 @@ Type TAArray::getMemberType() const {
 }
 
 void TAArray::list() const {
+	std::cout << "{";
 	for (auto it = m_arr.begin(); it != m_arr.end(); ++it) {
 		if (*it == NULL) {
 			std::cout << "uninitialized ";
 		}
 		else {
 			(*it)->list();
-			std::cout << ' ';
+			std::cout << ", ";
 		}
 	}
+	std::cout << "}";
 }

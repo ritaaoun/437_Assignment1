@@ -1,12 +1,12 @@
 #include "TAPair.hpp"
 #include <iostream>
 
-TAPair::TAPair(const TAPrimitive &lhs, const TAPrimitive &rhs) : TAPrimitive(), m_lhs(lhs), m_rhs(rhs) {
+TAPair::TAPair(TAPrimitive &lhs, TAPrimitive &rhs) : TAPrimitive(), m_lhs(lhs), m_rhs(rhs) {
 	TAPrimitive::setType(Type::pairType);
 }
 
 
-TAPair::TAPair(const std::string &name, const TAPrimitive &lhs, const TAPrimitive &rhs) : TAPrimitive(name), m_lhs(lhs), m_rhs(rhs) {
+TAPair::TAPair(const std::string &name, TAPrimitive &lhs, TAPrimitive &rhs) : TAPrimitive(name), m_lhs(lhs), m_rhs(rhs) {
 	TAPrimitive::setType(Type::pairType);
 }
 
